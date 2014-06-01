@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,6 +8,18 @@ using System.Threading.Tasks;
 namespace GreatFriends.Utils {
 
   public static class ThaiNumeralExtensions {
+
+    private static char[] nativeDigits;
+
+    static ThaiNumeralExtensions() {
+      nativeDigits = new char[10];
+
+      var th = CultureInfo.CreateSpecificCulture("th-TH");
+      int i = 0;
+      foreach (string digit in th.NumberFormat.NativeDigits) {
+        nativeDigits[i++] = digit[0];
+      }
+    }
 
     public static string ToThaiNumerals(this int value) {
       return internalToThaiNumerals(value.ToString());
@@ -28,6 +41,22 @@ namespace GreatFriends.Utils {
     }
 
     private static string internalToThaiNumerals(string text) {
+      var chars = text.ToCharArray();
+      var sb = new StringBuilder(chars.Length);
+      
+      for (int i = 0; i < chars.Length; i++) {
+        if (Char.IsDigit(chars[i])) {
+          int n = (int)chars[i] - (int)'0';
+          sb.Append(nativeDigits[n]);
+        }
+        else {
+          sb.Append(chars[i]);
+        }
+      } 
+      return sb.ToString();
+    }
+
+    private static string internalToThaiNumerals_version1(string text) {
       const int diff = (int)'๑' - (int)'1';
       var sb = new StringBuilder();
       foreach (char ch in text) {

@@ -37,10 +37,22 @@ namespace GreatFriends.Utils.ThaiNumeralsTests {
       [Test]
       public void ZeroToNine() {
         double val = 1234567890.123;
-
         string str = val.ToThaiNumerals();
-
         Assert.AreEqual("๑๒๓๔๕๖๗๘๙๐.๑๒๓", str);
+      }
+
+      [Test]
+      public void NegativeValue() {
+        double val = -18.25;
+        string str = val.ToThaiNumerals();
+        Assert.AreEqual("-๑๘.๒๕", str);
+      }
+
+      [Test]
+      public void ShouldIgnoreAndKeepExtraSpaceAsIs() {
+        string val = " 135 ";
+        string str = val.ToThaiNumerals();
+        Assert.AreEqual(" ๑๓๕ ", str);
       }
     }
   }
