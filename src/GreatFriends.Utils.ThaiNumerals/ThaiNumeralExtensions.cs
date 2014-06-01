@@ -23,6 +23,9 @@ namespace GreatFriends.Utils {
     public static string ToThaiNumerals(this decimal value) {
       return internalToThaiNumerals(value.ToString());
     }
+    public static string ToThaiNumerals(this string value) {
+      return internalToThaiNumerals(value);
+    }
 
     private static string internalToThaiNumerals(string text) {
       const int diff = (int)'๑' - (int)'1';
