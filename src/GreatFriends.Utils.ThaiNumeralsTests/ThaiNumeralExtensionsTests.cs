@@ -12,7 +12,7 @@ namespace GreatFriends.Utils.ThaiNumeralsTests {
 
     /// <summary>
     /// แสดงข้อความค่าตัวเลขด้วยตัวอักษรเลขไทย 
-    /// เช่น ค่า 12345.67 เป็น "๑๒,๓๔๕.๖๗"
+    /// เช่น ค่า 12345.67 เป็น "๑๒๓๔๕.๖๗"
     /// </summary>
     [TestFixture]
     public class TheToThaiNumeralsMethod {      
@@ -53,6 +53,13 @@ namespace GreatFriends.Utils.ThaiNumeralsTests {
         string val = " 135 ";
         string str = val.ToThaiNumerals();
         Assert.AreEqual(" ๑๓๕ ", str);
+      }
+
+      [Test]
+      public void IgnoreThaiDigits() {
+        string val = "ที่ ๒๕๕๗/2";
+        string str = val.ToThaiNumerals();
+        Assert.AreEqual("ที่ ๒๕๕๗/๒", str);
       }
     }
   }

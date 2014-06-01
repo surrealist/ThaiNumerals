@@ -43,16 +43,16 @@ namespace GreatFriends.Utils {
     private static string internalToThaiNumerals(string text) {
       var chars = text.ToCharArray();
       var sb = new StringBuilder(chars.Length);
-      
+
       for (int i = 0; i < chars.Length; i++) {
-        if (Char.IsDigit(chars[i])) {
+        if ('0' <= chars[i] && chars[i] <= '9') {
           int n = (int)chars[i] - (int)'0';
           sb.Append(nativeDigits[n]);
         }
         else {
           sb.Append(chars[i]);
         }
-      } 
+      }
       return sb.ToString();
     }
 
