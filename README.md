@@ -9,7 +9,7 @@ This is general usages, all results are "๑๒๓"
     int valInt32       = 123;
     long valInt64      = 123L;
     float valSingle    = 123F;
-    double valDouble   = 123.0;
+    double valDouble   = 123D;
     decimal valDecimal = 123M;
 
     string strInt32 = valInt32.ToThaiNumerals();
