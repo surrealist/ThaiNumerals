@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatFriends.Utils.ThaiNumerals", "GreatFriends.Utils.ThaiNumerals\GreatFriends.Utils.ThaiNumerals.csproj", "{2BF7FB65-A8A6-412B-899E-665FFBF8DC0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatFriends.Utils.ThaiNumeralsTests", "GreatFriends.Utils.ThaiNumeralsTests\GreatFriends.Utils.ThaiNumeralsTests.csproj", "{524256CE-F1AF-4937-B137-12E857AEFEF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BF7FB65-A8A6-412B-899E-665FFBF8DC0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BF7FB65-A8A6-412B-899E-665FFBF8DC0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BF7FB65-A8A6-412B-899E-665FFBF8DC0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BF7FB65-A8A6-412B-899E-665FFBF8DC0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{524256CE-F1AF-4937-B137-12E857AEFEF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{524256CE-F1AF-4937-B137-12E857AEFEF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{524256CE-F1AF-4937-B137-12E857AEFEF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{524256CE-F1AF-4937-B137-12E857AEFEF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
