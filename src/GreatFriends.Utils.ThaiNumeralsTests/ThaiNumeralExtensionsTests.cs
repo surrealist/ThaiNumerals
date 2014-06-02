@@ -61,6 +61,22 @@ namespace GreatFriends.Utils.ThaiNumeralsTests {
         string str = val.ToThaiNumerals();
         Assert.AreEqual("ที่ ๒๕๕๗/๒", str);
       }
+
+      [Test]
+      public void UseSimpleFormatString() {
+        var val = 2398.657;
+        var str = val.ToThaiNumerals("n2");
+        Assert.AreEqual("๒,๓๙๘.๖๖", str);
+      }
+
+
+      [Test]
+      public void UseNegativeFormat() {
+        var val = -2398.657;
+        var str = val.ToThaiNumerals("#,##0.00;(#,##0.00);-");
+        Assert.AreEqual("(๒,๓๙๘.๖๖)", str);
+      }
+
     }
   }
 }

@@ -16,20 +16,20 @@ namespace GreatFriends.Utils {
       nativeDigits = th.NumberFormat.NativeDigits;      
     }
 
-    public static string ToThaiNumerals(this int value) {
-      return internalToThaiNumerals(value.ToString());
+    public static string ToThaiNumerals(this int value, string format = null) {
+      return internalToThaiNumerals(value.ToString(format));
     }
-    public static string ToThaiNumerals(this long value) {
-      return internalToThaiNumerals(value.ToString());
+    public static string ToThaiNumerals(this long value, string format = null) {
+      return internalToThaiNumerals(value.ToString(format));
     }
-    public static string ToThaiNumerals(this float value) {
-      return internalToThaiNumerals(value.ToString());
+    public static string ToThaiNumerals(this float value, string format = null) {
+      return internalToThaiNumerals(value.ToString(format));
     }
-    public static string ToThaiNumerals(this double value) {
-      return internalToThaiNumerals(value.ToString());
+    public static string ToThaiNumerals(this double value, string format = null) {
+      return internalToThaiNumerals(value.ToString(format));
     }
-    public static string ToThaiNumerals(this decimal value) {
-      return internalToThaiNumerals(value.ToString());
+    public static string ToThaiNumerals(this decimal value, string format = null) {
+      return internalToThaiNumerals(value.ToString(format));
     }
     public static string ToThaiNumerals(this string value) {
       return internalToThaiNumerals(value);
