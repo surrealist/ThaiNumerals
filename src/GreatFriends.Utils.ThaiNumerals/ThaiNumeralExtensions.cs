@@ -9,18 +9,11 @@ namespace GreatFriends.Utils {
 
   public static class ThaiNumeralExtensions {
 
-    private static char[] nativeDigits;
+    private static string[] nativeDigits;
 
     static ThaiNumeralExtensions() {
       var th = CultureInfo.CreateSpecificCulture("th-TH");
-      int i = 0;
-      var digits = th.NumberFormat.NativeDigits;
-      
-      nativeDigits = new char[digits.Length];
-
-      foreach (string digit in digits) {
-        nativeDigits[i++] = digit[0];
-      }
+      nativeDigits = th.NumberFormat.NativeDigits;      
     }
 
     public static string ToThaiNumerals(this int value) {
