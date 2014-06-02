@@ -16,6 +16,12 @@ namespace GreatFriends.Utils {
       nativeDigits = th.NumberFormat.NativeDigits;      
     }
 
+    public static string ToThaiNumerals(this byte value, string format = null) {
+      return internalToThaiNumerals(value.ToString(format));
+    }
+    public static string ToThaiNumerals(this short value, string format = null) {
+      return internalToThaiNumerals(value.ToString(format));
+    }
     public static string ToThaiNumerals(this int value, string format = null) {
       return internalToThaiNumerals(value.ToString(format));
     }
