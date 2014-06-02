@@ -12,11 +12,13 @@ namespace GreatFriends.Utils {
     private static char[] nativeDigits;
 
     static ThaiNumeralExtensions() {
-      nativeDigits = new char[10];
-
       var th = CultureInfo.CreateSpecificCulture("th-TH");
       int i = 0;
-      foreach (string digit in th.NumberFormat.NativeDigits) {
+      var digits = th.NumberFormat.NativeDigits;
+      
+      nativeDigits = new char[digits.Length];
+
+      foreach (string digit in digits) {
         nativeDigits[i++] = digit[0];
       }
     }
