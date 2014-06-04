@@ -17,3 +17,15 @@ This is general usages, all results are "๑๒๓"
     string strSingle = valSingle.ToThaiNumerals();
     string strDouble = valDouble.ToThaiNumerals();
     string strDecimal = valDecimal.ToThaiNumerals();    
+
+You can formatting value before convert it to Thai numerals:
+
+    decimal price = 1500.75m;
+    string  str   = price.ToString("#,##0.00");
+    string  th    = str.ToThaiNumerals(); // ๑,๕๐๐.๗๕
+    
+or pass the format directly:
+
+    string  th    = price.ToThaiNumerals("#,##0.00");
+    
+    
