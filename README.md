@@ -1,7 +1,7 @@
 ThaiNumerals
 ============
 
-Convert a value to Thai Numerals text. Ex. from 123 to "๑๒๓"
+Convert a value to Thai Numerals text. Ex. from 1234567890 to "๑๒๓๔๕๖๗๘๙๐"
 
 
 This is general usages, all results are "๑๒๓"
